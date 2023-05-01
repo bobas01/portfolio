@@ -51,7 +51,7 @@ catch(PDOException $e){
                                 src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
                         <a class="icon" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg"
                                 alt="github"></a>
-                        <button id="C.V"><a href="#">Mon C.V.</a></button>
+                        <button id="C.V"><a href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ catch(PDOException $e){
         <div class="row-limit-size">
             <article>
                 <h2>Développement web responsive</h2>
-                <img src="./asset/img/projet/mokup-multidevice 1.webp" alt="mokup portfolio">
+                <img src="./asset/img/projet/smartmockups_lg26j38g.jpg" alt="mokup portfolio">
             </article>
         </div>
     </section>
