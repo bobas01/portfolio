@@ -8,7 +8,7 @@ let mLeft = 0;
 
 
 rightArrow.addEventListener('click', function () {
-   if (mLeft - windowSlider == windowSlider * -6) {
+   if (mLeft - windowSlider == windowSlider * -8) {
 
       this.click.stopPropagation()
    }

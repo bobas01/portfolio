@@ -47,11 +47,11 @@ catch(PDOException $e){
                         <h3>Développeur fullstack</h3>
                     </article>
                     <div id="links">
-                        <a class="icon" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img
+                        <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img
                                 src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
-                        <a class="icon" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg"
+                        <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg"
                                 alt="github"></a>
-                        <button id="C.V"><a href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
+                        <button id="C.V"><a target="_blank" href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
                     </div>
                 </div>
             </div>
@@ -115,15 +115,17 @@ catch(PDOException $e){
                 </div>
                 <div id="window-slider">
                     <div id="list-slide">
-                        <div class="slide"><img src="./asset/img/projet/projetKitsuthèque.jpg" alt="kitsuthèque"></div>
-                        <div class="slide"><img src="./asset/img/projet/projetJadoo.jpg" alt="jadoo"></div>
-                        <div class="slide"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></div>
-                        <div class="slide"><img src="./asset/img/projet/projetflag.jpg" alt="flags"></div>
-                        <div class="slide"><img src="./asset/img/projet/ProjetResto.jpg" alt="restaurant"></div>
-                        <div class="slide"><img src="./asset/img/projet/projetclosdeMarsault.jpg"
-                                alt="Leclos de projetclosdeMarsault"></div>
-                        <div class="slide"><img src="./asset/img/projet/projetVueLamp.jpg" alt="VueLamp"></div>
+                        <div class="slide"><a target="_blank" href="../Kitsu-theque "><img src="./asset/img/projet/projetKitsuthèque.jpg" alt="kitsuthèque"></a></div>
+                        <div class="slide"><a target="_blank" href="../judo-sushi"><img src="./asset/img/projet/projetJadoo.jpg" alt="jadoo"></a></div>
+                        <div class="slide"><a target="_blank" href="../caeliV2"><img src="./asset/img/projet/CaeliV2.jpg" alt="CaeliV2"></a></div>
+                        <div class="slide"><a target="_blank" href="../gite-du-panda"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></a></div>
+                        <div class="slide"><a target="_blank" href="../glossaire-drapeau"><img src="./asset/img/projet/projetflag.jpg" alt="flags"></a></div>
+                        <div class="slide"><a target="_blank" href="../restaurant"><img src="./asset/img/projet/ProjetResto.jpg" alt="restaurant"></a></div>
+                        <div class="slide"><a target="_blank" href="../clos-marsault_web"><img src="./asset/img/projet/projetclosdeMarsault.jpg"
+                                alt="Leclos de projetclosdeMarsault"></a></div>
+                        <div class="slide"><a target="_blank" href="../VueLamp2"><img src="./asset/img/projet/projetVueLamp.jpg" alt="VueLamp"></a></div>
                     </div>
+                        
                 </div>
                 <div id="rightArrow">
                     <img src="./asset/img/icon/rightArrow.svg" alt="arrow">

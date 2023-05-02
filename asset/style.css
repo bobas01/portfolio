@@ -73,13 +73,19 @@ header .row-limit-size div #pseudo img {
   justify-content: space-between;
   padding-top: 10px;
 }
+#presentation .row-limit-size > div > div #links .icon {
+  cursor: pointer;
+  z-index: 100;
+}
 #presentation .row-limit-size > div > div #links .icon img {
   width: 25px;
 }
 #presentation .row-limit-size > div > div #links button {
   background-color: #91BA6A;
+  cursor: pointer;
   width: 80px;
   height: 30px;
+  z-index: 100;
 }
 #presentation .row-limit-size > div > div #links button a {
   color: #fff;
@@ -416,7 +422,8 @@ footer form label {
   font-family: "Roboto", sans-serif;
   padding-left: 10%;
 }
-footer form input, footer form textarea {
+footer form input,
+footer form textarea {
   width: 80%;
   margin: 0 auto;
   display: block;

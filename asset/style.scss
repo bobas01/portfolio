@@ -100,19 +100,29 @@ header {
                 justify-content: space-between;
                 padding-top: 10px;
 
-                .icon img {
-                    width: 25px;
+                .icon {
+                    cursor: pointer;
+                    z-index: 100;
+
+                    img {
+                        width: 25px;
+
+                    }
                 }
 
                 button {
                     background-color: $green;
+                    cursor: pointer;
                     width: 80px;
                     height: 30px;
+                    z-index: 100;
+
 
                     a {
                         color: #fff;
                         font-family: $Txt;
                         font-size: 1rem;
+
                     }
                 }
             }
@@ -212,7 +222,8 @@ header {
             figure img {
                 width: 400px;
             }
-            article{
+
+            article {
                 padding-top: 60px;
             }
 
@@ -419,37 +430,38 @@ header {
         }
     }
 }
+
 @media screen and (min-width: 500px) {
     #projet {
-    
+
         .row-limit-size {
-           
-    
+
+
             #slider {
-               
-    
+
+
                 #window-slider {
                     width: 400px;
                     height: 280px;
                     overflow: hidden;
                     margin: 0 auto;
                     margin-top: 50px;
-    
-    
+
+
                     #list-slide {
-    
+
                         margin-left: 0;
-    
+
                         .slide img {
                             width: 100%;
-    
-    
+
+
                         }
                     }
                 }
-    
+
             }
-    
+
             #swipe {
                 img {
                     width: 20%;
@@ -460,8 +472,9 @@ header {
             }
         }
     }
-    
+
 }
+
 /*projet desktop*/
 @media screen and (min-width : 800px) {
     #projet {
@@ -523,87 +536,101 @@ header {
 /*contact phone*/
 
 footer {
-    h2{
+    h2 {
         padding: 100px 0;
         font-size: 2rem;
     }
-    #myInfo{
+
+    #myInfo {
         padding-bottom: 50px;
         width: 100%;
         max-width: 700px;
-        margin: 0 auto; 
+        margin: 0 auto;
+
         p {
             font-family: $Txt;
             width: 80%;
-                      
+
             padding: 0 0 20px 50px;
         }
-        #number{ 
-            position: relative;           
-            &::before{
-                content: url(./img/icon/numero.png); 
+
+        #number {
+            position: relative;
+
+            &::before {
+                content: url(./img/icon/numero.png);
                 position: absolute;
                 left: 10px;
-                top: -10px;           
-            }           
+                top: -10px;
+            }
         }
+
         #mail {
             position: relative;
+
             &::before {
                 content: url(./img/icon/mail.png);
                 position: absolute;
                 left: 10px;
-                top: -10px;   
+                top: -10px;
             }
         }
+
         #address {
             position: relative;
+
             &::before {
                 content: url(./img/icon/adresse.png);
                 position: absolute;
                 left: 10px;
-                top: 5px;   
+                top: 5px;
             }
         }
-        
+
     }
-    form{
-       background-color: $green; 
-       width: 100%;
-       max-width: 700px;
-       padding: 50px 0;
-       label {
-        font-family: $Txt;
-        padding-left: 10%;
-       }
-       input, textarea {
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-       }
-       #submit{
-        background-color: #fff;
-        color: $green;
-        padding: 10px 0;
-        font-weight: 700;
-        font-size: 1.2rem;
-       }
+
+    form {
+        background-color: $green;
+        width: 100%;
+        max-width: 700px;
+        padding: 50px 0;
+
+        label {
+            font-family: $Txt;
+            padding-left: 10%;
+        }
+
+        input,
+        textarea {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        #submit {
+            background-color: #fff;
+            color: $green;
+            padding: 10px 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
     }
 }
 
 @media screen and (min-width:600px) {
-    footer{
+    footer {
         #contact {
             display: flex;
-            #myInfo{
+
+            #myInfo {
                 padding-top: 100px;
-                p{
+
+                p {
                     margin-left: 100px;
                 }
-                
+
             }
         }
     }
-    
-}
 
+}
