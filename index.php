@@ -145,7 +145,7 @@ catch(PDOException $e){
                 <p id="mail">alexandre.sequeira01@gmail.com</p>
                 <p id="address">63 rue Maryse Bastié <br>01000 Saint-Denis-lès-Bourg</p>                
             </div>
-            <form action="mailto:alexandre.sequeira01@gmail.com" method="post" enctype="text/plain">
+            <form  method="post" enctype="text/plain">
   <label for="name">Nom :</label><br>
   <input type="text" id="name" name="name" required><br>
 
@@ -163,9 +163,28 @@ catch(PDOException $e){
 
   <input id="submit" type="submit" value="Envoyer">
 </form>
+<?php
+ if (isset($_POST['message'])) {
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: webmaster@portfolio.fr' . "\r\n";
+        $entete .= '<h3> ' . $_POST['name']." ". $_POST['surname']."</h3>";
+       
+        $entete .= "<br>".$_POST['phone'];
+        $entete .= "<br>". $_POST['email'];
+        
+
+        $message = "<p>".htmlspecialchars($_POST['message'])."</p>"  ;
+
+        $retour = mail('alexandre.sequeira01@gmail.com', 'Envoi depuis page Contact', $message, $entete);
+        if($retour)
+            echo '<p>Votre message a bien été envoyé.</p>';
+    }
+
+    ?>
 </div>
             
-                <!-- <iframe data-tally-src="https://tally.so/embed/wgaOzO?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" title="null"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script> -->
+            
         </div>
     </footer>
 
