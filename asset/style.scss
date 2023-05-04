@@ -16,7 +16,7 @@ a {
 
 h2 {
     font-size: 1.2rem;
-    font-family: $Txt;
+    font-family: $title;
     text-align: center;
 }
 
@@ -384,6 +384,19 @@ header {
             font-size: 2rem;
         }
 
+        #txtProjet {
+
+            font-family: $Txt;
+            color: #fff;
+            width: 90%;
+            margin: 0 auto;
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+
         #slider {
             width: 100%;
 
@@ -480,54 +493,61 @@ header {
     #projet {
 
 
-        .row-limit-size #slider {
-            position: relative;
-            height: 415px;
-
-            #leftArrow,
-            #rightArrow {
-                display: block;
-                position: absolute
-            }
-
-            #leftArrow {
-                top: 27%;
-                left: 8%;
-
-                img {
-                    width: 100px;
-                }
-            }
-
-            #window-slider {
+        .row-limit-size {
+            #txtProjet {
                 width: 500px;
-                height: 300px;
+            }
+            #slider {
+                position: relative;
+                height: 415px;
 
-                #list-slide {
-                    display: flex;
+                #leftArrow,
+                #rightArrow {
+                    display: block;
+                    position: absolute
+                }
 
-                    .slide img {
-                        width: 500px;
+                #leftArrow {
+                    top: 27%;
+                    left: 8%;
 
+                    img {
+                        width: 100px;
                     }
                 }
-            }
 
-            #rightArrow {
-                top: 27%;
-                right: 8%;
+                #window-slider {
+                    width: 500px;
+                    height: 300px;
 
-                img {
-                    width: 100px;
+                    #list-slide {
+                        display: flex;
+
+                        .slide img {
+                            width: 500px;
+
+                        }
+                    }
                 }
+
+                #rightArrow {
+                    top: 27%;
+                    right: 8%;
+
+                    img {
+                        width: 100px;
+                    }
+                }
+
+
             }
 
-
+            #swipe {
+                display: none;
+            }
         }
 
-        #swipe {
-            display: none;
-        }
+
 
     }
 }
@@ -615,6 +635,15 @@ footer {
             font-size: 1.2rem;
         }
     }
+
+    #copyright {
+        background-color: $green;
+        font-family: $title;
+        text-align: center;
+        color: #fff;
+        padding: 30px 0;
+
+    }
 }
 
 @media screen and (min-width:600px) {
@@ -633,4 +662,74 @@ footer {
         }
     }
 
+}
+
+
+/*page project phone*/
+#titlePageProject {
+   
+    padding: 50px 0;
+    font-size: 2rem;
+    text-align: center;
+    font-family: $title;
+   
+}
+.project {
+    padding: 50px 0;
+    h2 {
+        padding-bottom: 50px;
+        font-family: $title;
+    }
+
+    figure {
+        width: 100%;
+
+        img {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    p {
+        width: 80%;
+        margin: 0 auto;
+        font-family: $Txt;
+        text-align: justify;
+        margin-top: 50px;
+        font-size: 1rem;
+    }
+}
+
+.green {
+    background-color: $green;
+    color: #fff;
+}
+
+.white {
+    color: $green;
+}
+
+/*page project tablet desktop*/
+@media screen and (min-width:600px) {
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h2{
+            width: 100%;
+        }
+        figure,
+        p {
+            width: 40%;
+        }
+
+        figure img {
+            border: 1px solid $green;
+        }
+
+        p {
+            margin-top: unset;
+        }
+    }
 }

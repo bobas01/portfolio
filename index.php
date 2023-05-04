@@ -1,40 +1,5 @@
-<?php
-try {
-    $db = new PDO ('mysql:host=localhost;dbname=formulaireportfolio;charset=utf8','root');
-}
-catch(PDOException $e){
-    echo "Erreur :" . $e->getMessage();
-}?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOBAS.DEV</title>
-    <link rel="stylesheet" href="./asset/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="row-limit-size">
-            <div>
-                <figure id="logo">
-                    <img src="./asset/img/divers/logoCircle.svg" alt="logo">
-                </figure>
-                <figure id="pseudo">
-                    <img src="./asset/img/divers/BOBAS.svg" alt="bobas.dev">
-                </figure>
-            </div>
-        </div>
-    </header>
+<?php include_once './header.php' ?>
+<main>
     <section id="presentation">
         <div class="row-limit-size">
             <div>
@@ -47,10 +12,8 @@ catch(PDOException $e){
                         <h3>Développeur fullstack</h3>
                     </article>
                     <div id="links">
-                        <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img
-                                src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
-                        <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg"
-                                alt="github"></a>
+                        <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
+                        <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg" alt="github"></a>
                         <button id="C.V"><a target="_blank" href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
                     </div>
                 </div>
@@ -109,6 +72,7 @@ catch(PDOException $e){
     <section id="projet">
         <div class="row-limit-size">
             <h2>Mes projets</h2>
+            <p id="txtProjet">Cliquer sur le mokup pour accéder au projet et pour les détails de chaque projet : <br> <a href="./projet.php">Cliquer ici</a></p>
             <div id="slider">
                 <div id="leftArrow">
                     <img src="./asset/img/icon/leftArrow.svg" alt="left arrow">
@@ -121,74 +85,78 @@ catch(PDOException $e){
                         <div class="slide"><a target="_blank" href="../gite-du-panda"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></a></div>
                         <div class="slide"><a target="_blank" href="../glossaire-drapeau"><img src="./asset/img/projet/projetflag.jpg" alt="flags"></a></div>
                         <div class="slide"><a target="_blank" href="../restaurant"><img src="./asset/img/projet/ProjetResto.jpg" alt="restaurant"></a></div>
-                        <div class="slide"><a target="_blank" href="../clos-marsault_web"><img src="./asset/img/projet/projetclosdeMarsault.jpg"
-                                alt="Leclos de projetclosdeMarsault"></a></div>
+                        <div class="slide"><a target="_blank" href="../clos-marsault_web"><img src="./asset/img/projet/projetclosdeMarsault.jpg" alt="Leclos de projetclosdeMarsault"></a></div>
                         <div class="slide"><a target="_blank" href="../VueLamp2"><img src="./asset/img/projet/projetVueLamp.jpg" alt="VueLamp"></a></div>
                     </div>
-                        
+
                 </div>
                 <div id="rightArrow">
                     <img src="./asset/img/icon/rightArrow.svg" alt="arrow">
                 </div>
             </div>
-            <figure id="swipe"><img src="./asset/img/icon/doubleArrow.svg" alt="swipe"
-                    style="width: 50px; height: 50px;"></figure>
+            <figure id="swipe"><img src="./asset/img/icon/doubleArrow.svg" alt="swipe" style="width: 50px; height: 50px;"></figure>
         </div>
     </section>
-    <footer>
-        <div class="row-limit-size">
-            <h2>Contact</h2>
-            <div id="contact">
+</main>
+
+<footer>
+    <div class="row-limit-size">
+        <h2>Contact</h2>
+        <div id="contact">
             <div id="myInfo">
                 <p>Alexandre SEQUEIRA</p>
                 <p id="number">0628657515</p>
                 <p id="mail">alexandre.sequeira01@gmail.com</p>
-                <p id="address">63 rue Maryse Bastié <br>01000 Saint-Denis-lès-Bourg</p>                
+                <p id="address">63 rue Maryse Bastié <br>01000 Saint-Denis-lès-Bourg</p>
             </div>
-            <form  method="post" enctype="text/plain">
-  <label for="name">Nom :</label><br>
-  <input type="text" id="name" name="name" required><br>
+            <form method="post" enctype="text/plain">
+                <label for="name">Nom :</label><br>
+                <input type="text" id="name" name="name" required><br>
 
-  <label for="surname">Prénom :</label><br>
-  <input type="text" id="surname" name="surname" required><br>
+                <label for="surname">Prénom :</label><br>
+                <input type="text" id="surname" name="surname" required><br>
 
-  <label for="phone">Numéro de téléphone :</label><br>
-  <input type="tel" id="phone" name="phone" required><br>
+                <label for="phone">Numéro de téléphone :</label><br>
+                <input type="tel" id="phone" name="phone" required><br>
 
-  <label for="email">E-mail :</label><br>
-  <input type="email" id="email" name="email" required><br>
+                <label for="email">E-mail :</label><br>
+                <input type="email" id="email" name="email" required><br>
 
-  <label for="message">Message :</label><br>
-  <textarea id="message" name="message" rows="5" cols="40" required></textarea><br>
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="5" cols="40" required></textarea><br>
 
-  <input id="submit" type="submit" value="Envoyer">
-</form>
-<?php
- if (isset($_POST['message'])) {
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: webmaster@portfolio.fr' . "\r\n";
-        $entete .= '<h3> ' . $_POST['name']." ". $_POST['surname']."</h3>";
-       
-        $entete .= "<br>".$_POST['phone'];
-        $entete .= "<br>". $_POST['email'];
-        
+                <input id="submit" type="submit" value="Envoyer">
+            </form>
+            <?php
+            if (isset($_POST['message'])) {
+                $entete  = 'MIME-Version: 1.0' . "\r\n";
+                $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                $entete .= 'From: webmaster@portfolio.fr' . "\r\n";
+                $entete .= '<h3> ' . $_POST['name'] . " " . $_POST['surname'] . "</h3>";
 
-        $message = "<p>".htmlspecialchars($_POST['message'])."</p>"  ;
+                $entete .= "<br>" . $_POST['phone'];
+                $entete .= "<br>" . $_POST['email'];
 
-        $retour = mail('alexandre.sequeira01@gmail.com', 'Envoi depuis page Contact', $message, $entete);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-    }
 
-    ?>
-</div>
-            
-            
+                $message = "<p>" . htmlspecialchars($_POST['message']) . "</p>";
+
+                $retour = mail('alexandre.sequeira01@gmail.com', 'Envoi depuis page Contact', $message, $entete);
+                if ($retour)
+                    echo '<p>Votre message a bien été envoyé.</p>';
+            }
+
+            ?>
         </div>
-    </footer>
 
-    <script src="./main.js"></script>
+
+    </div>
+    <div id="copyright">
+        <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="cpopyright">Bobas.Dev 2023</span>
+    </div>
+
+</footer>
+
+<script src="./main.js"></script>
 </body>
 
 </html>

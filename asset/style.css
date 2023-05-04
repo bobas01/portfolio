@@ -13,7 +13,7 @@ a {
 
 h2 {
   font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Carter One", cursive;
   text-align: center;
 }
 
@@ -277,6 +277,16 @@ header .row-limit-size div #pseudo img {
   color: #fff;
   font-size: 2rem;
 }
+#projet .row-limit-size #txtProjet {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+}
+#projet .row-limit-size #txtProjet a {
+  color: #fff;
+  text-decoration: underline;
+}
 #projet .row-limit-size #slider {
   width: 100%;
 }
@@ -332,6 +342,9 @@ header .row-limit-size div #pseudo img {
 }
 /*projet desktop*/
 @media screen and (min-width: 800px) {
+  #projet .row-limit-size #txtProjet {
+    width: 500px;
+  }
   #projet .row-limit-size #slider {
     position: relative;
     height: 415px;
@@ -365,7 +378,7 @@ header .row-limit-size div #pseudo img {
   #projet .row-limit-size #slider #rightArrow img {
     width: 100px;
   }
-  #projet #swipe {
+  #projet .row-limit-size #swipe {
     display: none;
   }
 }
@@ -435,6 +448,13 @@ footer form #submit {
   font-weight: 700;
   font-size: 1.2rem;
 }
+footer #copyright {
+  background-color: #91BA6A;
+  font-family: "Carter One", cursive;
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+}
 
 @media screen and (min-width: 600px) {
   footer #contact {
@@ -445,5 +465,67 @@ footer form #submit {
   }
   footer #contact #myInfo p {
     margin-left: 100px;
+  }
+}
+/*page project phone*/
+#titlePageProject {
+  padding: 50px 0;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Carter One", cursive;
+}
+
+.project {
+  padding: 50px 0;
+}
+.project h2 {
+  padding-bottom: 50px;
+  font-family: "Carter One", cursive;
+}
+.project figure {
+  width: 100%;
+}
+.project figure img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.project p {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  margin-top: 50px;
+  font-size: 1rem;
+}
+
+.green {
+  background-color: #91BA6A;
+  color: #fff;
+}
+
+.white {
+  color: #91BA6A;
+}
+
+/*page project tablet desktop*/
+@media screen and (min-width: 600px) {
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .project h2 {
+    width: 100%;
+  }
+  .project figure,
+  .project p {
+    width: 40%;
+  }
+  .project figure img {
+    border: 1px solid #91BA6A;
+  }
+  .project p {
+    margin-top: unset;
   }
 }/*# sourceMappingURL=style.css.map */
