@@ -72,7 +72,7 @@
     <section id="projet">
         <div class="row-limit-size">
             <h2>Mes projets</h2>
-            <p id="txtProjet">Cliquer sur le mokup pour accéder au projet et pour les détails de chaque projet : <br> <a href="./projet.php">Cliquer ici</a></p>
+            <p id="txtProjet">Cliquer sur l'image pour accéder au projet et pour les détails de chaque projet : <br> <a href="./projet.php">Cliquer ici</a></p>
             <div id="slider">
                 <div id="leftArrow">
                     <img src="./asset/img/icon/leftArrow.svg" alt="left arrow">

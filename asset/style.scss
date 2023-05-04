@@ -653,15 +653,36 @@ footer {
 
             #myInfo {
                 padding-top: 100px;
+                width: 50%;
 
-                p {
-                    margin-left: 100px;
-                }
 
+                // p {
+                //     margin-right: 50px;
+                //     margin-left: 50px;
+                // }
+
+            }
+            form{
+                width: 50%;
             }
         }
     }
 
+}
+@media screen and (min-width:800px) {
+    footer {
+        #contact{
+           margin-bottom: 50px;
+            #myInfo {
+                max-width: 600px;
+                p {
+                    width: 80%;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 

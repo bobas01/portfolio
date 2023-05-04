@@ -462,9 +462,23 @@ footer #copyright {
   }
   footer #contact #myInfo {
     padding-top: 100px;
+    width: 50%;
+  }
+  footer #contact form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  footer #contact {
+    margin-bottom: 50px;
+  }
+  footer #contact #myInfo {
+    max-width: 600px;
   }
   footer #contact #myInfo p {
-    margin-left: 100px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
   }
 }
 /*page project phone*/

@@ -4,43 +4,43 @@
    <section class="project green">
     <h2>Kitsuthèque</h2>
     <figure><a href="../Kitsu-theque"><img src="./asset/img/projet/projetKitsuthèque.jpg" alt="kitsuthèque la mangathèque"></a></figure>
-    <p>Premier projet de groupe dans ma formation ou je me suis retrouver dev leader. Il avait pour but de créer un site pour une bibliothèque. Nous nous sommes concentrer à réaliser une mangathèque. Nous devions être trois sur le projet mais malheureusement nous avons été que deux pour réaliser ce projet en 4 semaine. Un projet en HTML, SCSS, JS, PHP et mySQL. <br> J'ai du travailler sur le front et le back. J'ai entièrement réalisé le design. Côté front, j'ai codé tout le côté utilisateur et une partie côté administrateur. En ce qui concerne le back j'ai produit le coté utilisateur &#40barre de recherche, filtre du catalogue en AJAX, slider, swipe... &#41 ainsi qu'une partie côté administrateur.</p>
+    <p>Premier projet de groupe dans ma formation ou je me suis retrouver dev leader. Il avait pour but de créer un site pour une bibliothèque. Nous nous sommes concentrés à créer une mangathèque. Nous devions être trois sur le projet mais malheureusement nous avons été que deux pour réaliser ce projet en 4 semaine. Un projet en HTML, SCSS, JS, PHP et mySQL. <br> J'ai dû travailler sur le front et le back. J'ai entièrement designé le site. Côté front, j'ai codé tout le côté utilisateur et une partie côté administrateur. En ce qui concerne le back j'ai produit le coté utilisateur &#40barre de recherche, filtre du catalogue en AJAX, slider, swipe... &#41 ainsi qu'une partie côté administrateur.</p>
 
    </section>
    <section class="project white">
     <h2>Jadoo</h2>
     <figure><a href="../judo-sushi"><img src="./asset/img/projet/projetJadoo.jpg" alt="jadoo le restaurant japonais"></a></figure>
-    <p>Second projet en solo dans la formation. Le but étant de partir d'une maquette et réaliser le site en HTML, CSS et JS. J'ai réaliser ce projet en une semaine</p>
+    <p>Second projet en solo dans la formation. Le but étant de partir d'une maquette et coder le site en HTML, CSS et JS. J'ai fait ce projet en une semaine</p>
    </section>
    <section class="project green">
     <h2>Caeli</h2>
     <figure><a href="../caeliV2"><img src="./asset/img/projet/CaeliV2.jpg" alt="caeli le site pour savoir rénover écologique"></a></figure>
-    <p>Mon premier projet pour un client qui m'a envoyé un cahier des charge afin de réaliser ce site à but d'exemple pour le proposé à une société qui voudra ou non passer à l'étape suivante. Pour le moment il est juste réaliser en HTML, SCSS et JS. Si le projet est valider je m'occuperai de créer une base de donnée ainsi que la partie PHP.  </p>
+    <p>Mon premier projet pour un client qui m'a envoyé un cahier des charges afin de créer ce site à but d'exemple pour le proposer à une société qui voudra ou non passer à l'étape suivante. Pour le moment il est juste codé en HTML, SCSS et JS. Si le projet est validé je m'occuperai de créer une base de donnée ainsi que la partie PHP.  </p>
    </section>
    <section class="project white">
     <h2>Le gite du panda</h2>
     <figure><a href="../gite-du-panda"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></a></figure>
-    <p>Premier projet de la formation en solo réaliser en 4j de la maquette à la fin du code. Un projet onepage en HTML, CSS et JS.</p>
+    <p>Premier projet de la formation en solo réalisé en 4 jours de la maquette à la fin du code. Un projet onepage en HTML, CSS et JS.</p>
    </section>
    <section class="project green">
     <h2>Glossaire des drapeaux</h2>
     <figure><a href="../glossaire-drapeau"><img src="./asset/img/projet/projetflag.jpg" alt="le site des drapeaux des pays et des noms de capitale"></a></figure>
-    <p> Projet réaliser en suivant un tuto qui est tout en REACT JS réalisé bien avant mon entrée en formation</p>
+    <p> Projet réaliser en suivant un tuto qui est tout en REACT JS créé bien avant mon entrée en formation pour avoir un apercu des frameworks. </p>
    </section>
    <section class="project white">
     <h2>Restaurant</h2>
     <figure><a href="../restaurant"><img src="./asset/img/projet/ProjetResto.jpg" alt="Le restaurant"></a></figure>
-    <p>Second projet réalisé avant ma formation en suivant une maquette après avoir commencé à apprendre le code en autodidacte. Site réaliser en HTML et CSS.</p>
+    <p>Second projet codé avant ma formation en suivant une maquette après avoir commencé à apprendre le code en autodidacte. Site a été fait en HTML et CSS.</p>
    </section>
    <section class="project green">
     <h2>Le clos de marsault</h2>
     <figure><a href="../clos-marsault_web"><img src="./asset/img/projet/projetclosdeMarsault.jpg" alt="Clos de marsault le gite idéal"></a></figure>
-    <p>Premier projet réaliser en suivant une maquette après avoir commencé à apprendre le code en autodidacte. Site réaliser en HTML et CSS. </p>
+    <p>Premier projet codé en suivant une maquette après avoir commencé à apprendre le code en autodidacte. Site responsive et et utilisant le HTML et le CSS. </p>
    </section>
    <section class="project white">
     <h2>VueLamp</h2>
     <figure><a href="../VueLamp2"><img src="./asset/img/projet/projetVueLamp.jpg" alt="Vue lampe le site de lampe"></a></figure>
-    <p>Premier projet réaliser en suivant un tuto pour approcher le monde du développement web.</p>
+    <p>Premier projet réaliser en suivant un tuto pour approcher le monde du développement web avec une petite animation pour allumer la lampe.</p>
    </section>
 </main>
 <footer>
