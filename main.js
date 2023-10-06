@@ -5,10 +5,11 @@ let listSlide = document.getElementById('list-slide')
 let slide = document.getElementsByClassName('slide');
 let nbSlide = slide.length;
 let mLeft = 0;
+let intervalId; 
 
 
 rightArrow.addEventListener('click', function () {
-   if (mLeft - windowSlider == windowSlider * -8) {
+   if (mLeft - windowSlider == windowSlider * -10) {
 
       this.click.stopPropagation()
    }
@@ -46,7 +47,17 @@ function prevSlide() {
    slide[currentSlide].style.display = "block";
 }
 
+// Fonction pour démarrer le changement automatique d'images
+function startAutoSlide() {
+   intervalId = setInterval(nextSlide, 1000); // Change d'image toutes les 3 secondes (3000 millisecondes)
+}
 
+// Fonction pour arrêter le changement automatique d'images
+function stopAutoSlide() {
+   clearInterval(intervalId); // Arrête l'intervalle
+}
+
+startAutoSlide();
 listSlide.addEventListener("touchstart", handleTouchStart, false);
 listSlide.addEventListener("touchmove", handleTouchMove, false);
 
@@ -84,3 +95,30 @@ function handleTouchMove(evt) {
    xDown = null;
    yDown = null;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+   const elements = document.querySelectorAll('.has-animation');
+   elements.forEach(function(element, index) {
+     const delay = element.dataset.delay;
+ 
+     setTimeout(function() {
+       element.classList.add('animate-in');
+     }, delay);
+   });
+ });
+
+ const observer = new IntersectionObserver(entries => {
+   // Loop over the entries
+   entries.forEach(entry => {
+     // If the element is visible
+     if (entry.isIntersecting) {
+       // Add the animation class
+       entry.target.classList.add('image-animation');
+     }
+   });
+ });
+ 
+ const viewbox = document.querySelectorAll('.image');
+ viewbox.forEach(image => {
+   observer.observe(image);
+ });

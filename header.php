@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <div class="row-limit-size">
+        <div class="row-limit-size has-animation animation-ltr" data-delay="10">
             <div>
                 <figure id="logo">
                     <a href="./index.php"><img src="./asset/img/divers/logoCircle.svg" alt="logo"></a>

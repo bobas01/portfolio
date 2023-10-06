@@ -30,106 +30,245 @@ ul {
     margin: 0 auto;
 }
 
-header {
-    padding: 30px 0;
+.click-btn {
+    background-color: #fff;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    z-index: 100;
+    border-radius: 5px;
+    border-color: $green;
+    box-shadow: 0.3em 0.3em 0 #785123;
+    font-weight: 700;
 
-    .row-limit-size div {
-        display: flex;
-        justify-content: space-evenly;
+    &:hover {
+        box-shadow: (-0.3em) (-0.3em) 0 $green;
+        background-color: #785123;
+        border-color: #785123;
+        color: #fff;
 
-        #logo img {
-            width: 50px;
-        }
+    }
 
-        #pseudo img {
-            width: 250px;
+    a {
+        color: $green;
+        font-family: $Txt;
+        font-size: 1rem;
+
+        &:hover {
+            color: #fff;
         }
     }
 }
-
-/*header desktop*/
-
-@media screen and (min-width:800px) {
-
-
+.has-animation {
+    position: relative;
+    #logo, #pseudo, #panda, article, #links, .icon, .click-btn, img, p {
+        opacity: 0;
+    }
+    &.animate-in {
+        #logo, #pseudo, #panda, article, #links, .icon, .click-btn, img, p {
+        animation: textHidden 0.1s 1.1s forwards;
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 10;
+      }
+      &:before {
+        background-color: $green;
+      }
+      &:after {
+        background-color: #785123;
+        animation-delay: .5s;
+      }
+    }
+    &.animation-ltr.animate-in {
+      &:before {
+        animation: revealLTR 1.8s ease;
+      }
+      &:after {
+        animation: revealLTR 1s .6s ease;
+      }
+    }
+    &.animation-rtl.animate-in {
+      &:before {
+        animation: revealRTL 1.8s ease;
+      }
+      &:after {
+        animation: revealRTL 1s .6s ease;
+      }
+    }
+  }
+  
+  @keyframes revealRTL {
+    0%{
+      width: 0;
+      right: 0;
+    }
+    65%{
+      width: 100%;
+      right: 0;
+    }
+    100% {
+      width: 0;
+      right: 100%;
+    }
+  }
+  
+  @keyframes revealLTR {
+    0%{
+      width: 0;
+      left: 0;
+    }
+    65%{
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  
+  
+  
+  @keyframes textHidden {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes enter-animation {
+	0% {
+		transform: translateY(100px);
+    opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+    opacity: 1;
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .image-animation {
+    animation: enter-animation 0.8s 1;
+  }
+}
     header {
+        padding: 30px 0;
 
         .row-limit-size div {
-
+            display: flex;
+            justify-content: space-evenly;
 
             #logo img {
-                width: 100px;
+                width: 50px;
             }
 
             #pseudo img {
-                width: 500px;
+                width: 250px;
+                height: 50px;
             }
         }
     }
-}
 
-/*section présentation*/
+    /*header desktop*/
 
-#presentation .row-limit-size {
+    @media screen and (min-width:800px) {
 
-    >div {
-        display: flex;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 350px;
 
-        figure img {
-            width: 100px;
+        header {
+
+            .row-limit-size div {
+
+
+                #logo img {
+                    width: 100px;
+                }
+
+                #pseudo img {
+                    width: 500px;
+                    height: 80px;
+                }
+            }
         }
+    }
+
+    /*section présentation*/
+
+    #presentation .row-limit-size {
 
         >div {
-            article {
-                h1 {
-                    font-family: $title;
-                    font-size: 1.2rem;
-                }
+            display: flex;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 350px;
 
-                h3 {
-                    font-family: $Txt;
-                    font-size: 1.2rem;
-                }
+            figure img {
+                width: 100px;
             }
 
-            #links {
-                display: flex;
-                justify-content: space-between;
-                padding-top: 10px;
+            >div {
+                article {
+                    h1 {
+                        font-family: $title;
+                        font-size: 1.2rem;
+                    }
 
-                .icon {
-                    cursor: pointer;
-                    z-index: 100;
-
-                    img {
-                        width: 25px;
-
+                    h3 {
+                        font-family: $Txt;
+                        font-size: 1.2rem;
                     }
                 }
 
-                button {
-                    background-color: $green;
-                    cursor: pointer;
-                    width: 80px;
-                    height: 30px;
-                    z-index: 100;
+                #links {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 10px;
 
+                    .icon {
+                        cursor: pointer;
+                        z-index: 100;
+                        border-radius: 50%;
+                        transition: all 0.2s ease;
 
-                    a {
-                        color: #fff;
-                        font-family: $Txt;
-                        font-size: 1rem;
+                        &:hover {
+                            animation: circle-anim 0.3s ease forwards;
+                            transition: all 0.4s ease;
+                            background: #785123;
+                        }
 
+                        @keyframes circle-anim {
+                            0% {}
+
+                            90% {
+                                padding: 0.35em;
+                                margin: -0.35em;
+                            }
+
+                            100% {
+                                padding: 0.25em;
+                                margin: -0.25em;
+                            }
+                        }
+
+                        img {
+                            width: 25px;
+
+                        }
                     }
+
                 }
             }
         }
 
 
-    }
+    
 
     #txtPresentation {
         position: relative;
@@ -334,6 +473,10 @@ header {
 
             li {
                 padding-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-family: $title;
             }
 
         }
@@ -413,7 +556,7 @@ header {
 
             #window-slider {
                 width: 270px;
-                height: 190px;
+                height: 184px;
                 overflow: hidden;
                 margin: 0 auto;
                 margin-top: 50px;
@@ -441,6 +584,14 @@ header {
                 margin-bottom: 50px;
             }
         }
+        
+    }
+    #buttonProjet {
+        width: 120px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
     }
 }
 
@@ -467,6 +618,7 @@ header {
 
                         .slide img {
                             width: 100%;
+
 
 
                         }
@@ -497,6 +649,7 @@ header {
             #txtProjet {
                 width: 500px;
             }
+
             #slider {
                 position: relative;
                 height: 415px;
@@ -513,6 +666,7 @@ header {
 
                     img {
                         width: 100px;
+
                     }
                 }
 
@@ -556,6 +710,8 @@ header {
 /*contact phone*/
 
 footer {
+    border-top: 1px solid #fff;
+
     h2 {
         padding: 100px 0;
         font-size: 2rem;
@@ -662,19 +818,23 @@ footer {
                 // }
 
             }
-            form{
+
+            form {
                 width: 50%;
             }
         }
     }
 
 }
+
 @media screen and (min-width:800px) {
     footer {
-        #contact{
-           margin-bottom: 50px;
+        #contact {
+            margin-bottom: 50px;
+
             #myInfo {
                 max-width: 600px;
+
                 p {
                     width: 80%;
                     margin: 0 auto;
@@ -688,15 +848,17 @@ footer {
 
 /*page project phone*/
 #titlePageProject {
-   
+
     padding: 50px 0;
     font-size: 2rem;
     text-align: center;
     font-family: $title;
-   
+
 }
+
 .project {
     padding: 50px 0;
+
     h2 {
         padding-bottom: 50px;
         font-family: $title;
@@ -737,9 +899,11 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        h2{
+
+        h2 {
             width: 100%;
         }
+
         figure,
         p {
             width: 40%;
