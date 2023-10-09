@@ -1,6 +1,6 @@
 <?php include_once './header.php' ?>
 <main>
-   <section id="presentation">
+   <section id="presentation" class="has-animation">
   <div class="row-limit-size has-animation animation-ltr" data-delay="1000">
     <div>
       <figure>
@@ -142,12 +142,14 @@
 
     </div>
     <div id="copyright">
-        <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="cpopyright">Bobas.Dev 2023</span>
+        <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="copyright">Bobas.Dev 2023</span>
     </div>
 
 </footer>
 
 <script src="./main.js"></script>
+<script src="./animation.js"></script>
+
 </body>
 
 </html>

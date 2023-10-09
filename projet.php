@@ -88,3 +88,5 @@ Ce projet a été réalisé en utilisant le framework ReactJS. J'ai suivi un tut
         <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="cpopyright">Bobas.Dev 2023</span>
     </div>
 </footer>
+
+<script src="./animation.js"></script>

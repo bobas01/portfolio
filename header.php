@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="has-animation">
         <div class="row-limit-size has-animation animation-ltr" data-delay="10">
             <div>
                 <figure id="logo">
