@@ -4,7 +4,7 @@
     <h1 id="titlePageProject"> Mes projets</h1>
       <section class="project green">
     <h2>FlavourFusion</h2>
-    <figure><a href="https://bobasdev.com/homeaway1.0"><img src="./asset/img/projet/projetFlavourFusion.png" alt="Flavour Fusion site de recettes de cocktails"></a></figure>
+    <figure><a href="https://bobasdev.com/flavourfusion"><img src="./asset/img/projet/projetFlavourFusion.png" alt="Flavour Fusion site de recettes de cocktails"></a></figure>
     <p>J'ai réalisé un projet solo passionnant en utilisant Vue.js 3 et l'API Cocktail DB. L'objectif principal était de concevoir un site dédié aux cocktails, offrant aux utilisateurs la possibilité de rechercher des cocktails par leur nom, leur catégorie et leurs ingrédients. J'ai été en mesure de relever ce défi avec succès en seulement une semaine, bien avant la date limite de deux semaines.<br>
 L'intégration de l'API Cocktail DB a été un aspect essentiel du projet. Cela m'a permis de récupérer des données détaillées sur les cocktails, y compris leurs noms, catégories et ingrédients. J'ai utilisé les fonctionnalités de requête de l'API pour permettre aux utilisateurs de rechercher spécifiquement les cocktails qui correspondent à leurs préférences.<br>
 Dans l'ensemble, ce projet m'a permis d'améliorer mes compétences en développement web, en particulier avec Vue.js 3. J'ai acquis une expérience précieuse dans la manipulation des données provenant d'une API tierce et dans la création d'une interface utilisateur interactive.  </p>

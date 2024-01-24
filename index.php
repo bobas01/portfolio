@@ -1,34 +1,34 @@
 <?php include_once './header.php' ?>
 <main>
-   <section id="presentation" class="has-animation">
-  <div class="row-limit-size has-animation animation-ltr" data-delay="1000">
-    <div>
-      <figure>
-        <img id="panda" src="./asset/img/icon/panda_with_computer.png" alt="panda_with_computer">
-      </figure>
-      <div>
-        <article>
-          <h1>Alexandre SEQUEIRA</h1>
-          <h3>Développeur fullstack</h3>
-        </article>
-        <div id="links">
-          <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
-          <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg" alt="github"></a>
-          <button class="click-btn" id="C.V"><a target="_blank" href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
+    <section id="presentation" ">
+  <div class=" row-limit-size has-animation animation-ltr" data-delay="1000">
+        <div>
+            <figure>
+                <img id="panda" src="./asset/img/icon/panda_with_computer.png" alt="panda_with_computer">
+            </figure>
+            <div style="z-index:9;">
+                <article>
+                    <h1>Alexandre SEQUEIRA</h1>
+                    <h3>Développeur fullstack</h3>
+                </article>
+                <div id="links">
+                    <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
+                    <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg" alt="github"></a>
+                    <button class="click-btn" id="C.V"><a target="_blank" href="./asset/Alexandre Sequeira.pdf">Mon C.V.</a></button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div id="txtPresentation" class="has-animation animation-ltr" data-delay="1500">
-      <img src="./asset/img/divers/cadrePhone.svg" alt="cadre1">
-      <img src="./asset/img/divers/cadreStick.svg" alt="cadre2">
-      <p class="text">Développeur web full stack passionné par la création de sites web et d'applications, j'ai une expérience d'un an dans le domaine et j'aime travailler sur des projets stimulants qui me permettent de repousser mes limites.
+        <div id="txtPresentation" class="has-animation animation-ltr" data-delay="1500">
+            <img src="./asset/img/divers/cadrePhone.svg" alt="cadre1">
+            <img src="./asset/img/divers/cadreStick.svg" alt="cadre2">
+            <p class="text">Développeur web full stack passionné par la création de sites web et d'applications, j'ai une expérience d'un an dans le domaine et j'aime travailler sur des projets stimulants qui me permettent de repousser mes limites.
 
-        Je suis compétent dans plusieurs langages de programmation tels que HTML, SCSS, CSS, JS et PHP. J'aime travailler en équipe et je suis toujours à la recherche de nouveaux défis.
+                Je suis compétent dans plusieurs langages de programmation tels que HTML, SCSS, CSS, JS et PHP. J'aime travailler en équipe et je suis toujours à la recherche de nouveaux défis.
 
-        En dehors du développement web, j'aime le sport, les jeux vidéo, les mangas et les grands voyages.</p>
-    </div>
-  </div>
-</section>
+                En dehors du développement web, j'aime le sport, les jeux vidéo, les mangas et les grands voyages.</p>
+        </div>
+        </div>
+    </section>
 
     <section id="responsive">
 
@@ -45,7 +45,7 @@
                 <h2 class="image">Mes compétences</h2>
                 <ul>
                     <li class="image"><img class="image" src="./asset/img/icon/htmlCirclePhone.svg" alt="html"> HTML</li>
-                    <li class="image"><img  class="image" src="./asset/img/icon/cssCirclePhone.svg" alt="CSS"> CSS</li>
+                    <li class="image"><img class="image" src="./asset/img/icon/cssCirclePhone.svg" alt="CSS"> CSS</li>
                     <li class="image"><img class="image" src="./asset/img/icon/jsCirclePhone.svg" alt="JS">Javascript</li>
                     <li class="image"><img class="image" src="./asset/img/icon/sassCirclePhone.svg" alt="SASS">SCSS</li>
                     <li class="image"><img class="image" src="./asset/img/icon/phpCirclePhone.svg" alt="PHP">PHP</li>
@@ -59,7 +59,7 @@
     <section id="projet">
         <div class="row-limit-size">
             <h2>Mes projets</h2>
-        
+
             <div id="slider">
                 <div id="leftArrow">
                     <img src="./asset/img/icon/leftArrow.svg" alt="left arrow">
@@ -89,6 +89,8 @@
     </section>
 </main>
 
+
+
 <footer>
     <div class="row-limit-size">
         <h2>Contact</h2>
@@ -99,7 +101,7 @@
                 <p id="mail">alexandre.sequeira01@gmail.com</p>
                 <p id="address">63 rue Maryse Bastié <br>01000 Saint-Denis-lès-Bourg</p>
             </div>
-            <form method="post">
+            <form action="treatment.php" method="post">
                 <label for="name">Nom :</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -114,38 +116,47 @@
 
                 <label for="message">Message :</label><br>
                 <textarea id="message" name="message" rows="5" cols="40" required></textarea><br>
+                <input type="hidden" id="recaptchaResponse" name="recaptchaResponse">
 
                 <input id="submit" type="submit" value="Envoyer">
             </form>
-            <?php
-            if (isset($_POST['message'])) {
-                $entete  = 'MIME-Version: 1.0' . "\r\n";
-                $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-                $entete .= 'From: alexandre.sequeira@bobasdev.com' . "\r\n";
-                $entete .= 'Reply-To: ' . $_POST['email'] . "\r\n";
-
-
-
-
-                $message = "<h3>" . $_POST['name'] . " " . $_POST['surname'] . "</h3>";
-                $message .= "<p>" . htmlspecialchars($_POST['message']) . "</p>";
-                $message .= $_POST['phone'];
-
-                $retour = mail('alexandre.sequeira01@gmail.com', 'Envoi depuis page Contact', $message, $entete);
-                if ($retour)
-                    echo '<p>Votre message a bien été envoyé.</p>';
-            }
-
-            ?>
+            <script src="https://www.google.com/recaptcha/api.js?render=6Ld8sFEpAAAAANuo57ebv2dlqYlDT5NF-I_6cCVO"></script>
+            <script>
+                function onClick(e) {
+                    e.preventDefault();
+                    grecaptcha.ready(function() {
+                        grecaptcha.execute('6Ld8sFEpAAAAANuo57ebv2dlqYlDT5NF-I_6cCVO', {
+                            action: 'submit'
+                        }).then(function(token) {
+                            document.getElementById('recaptchaResponse').value = token
+                        });
+                    });
+                }
+            </script>
         </div>
-
-
     </div>
+    <?php
+    if (isset($_POST['message'])) {
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: alexandre.sequeira@bobasdev.com' . "\r\n";
+        $entete .= 'Reply-To: ' . $_POST['email'] . "\r\n";
+
+        $message = "<h3>" . $_POST['name'] . " " . $_POST['surname'] . "</h3>";
+        $message .= "<p>" . htmlspecialchars($_POST['message']) . "</p>";
+        $message .= $_POST['phone'];
+
+        $retour = mail('alexandre.sequeira01@gmail.com', 'Envoi depuis page Contact', $message, $entete);
+
+        if ($retour)
+            echo '<p>Votre message a bien été envoyé.</p>';
+    }
+    ?>
     <div id="copyright">
         <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="copyright">Bobas.Dev 2023</span>
     </div>
-
 </footer>
+
 
 <script src="./main.js"></script>
 <script src="./animation.js"></script>
