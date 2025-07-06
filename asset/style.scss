@@ -1112,31 +1112,27 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        align-items: center;
 
         h2 {
-            align-items: center;
+            width: 100%;
+        }
 
-            h2 {
-                width: 100%;
-            }
+        .project-image {
+            width: 40%;
+            max-width: 400px;
+            min-width: 220px;
+            margin-bottom: 0;
+            height: auto;
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-            figure,
-            p {
-                width: 40%;
-                max-width: 400px;
-                min-width: 220px;
-                margin-bottom: 0;
-                height: auto;
-                display: block;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            p {
-                width: 55%;
-                margin: 0;
-                align-self: center;
-            }
+        p {
+            width: 55%;
+            margin: 0;
+            align-self: center;
         }
     }
 
@@ -1163,6 +1159,39 @@ footer {
 
     .project-image:hover>a>img {
         transform: scale(1.05);
+    }
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .project-image:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-stack {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-stack img {
+        width: 36px;
+        height: 36px;
+        background: white;
+        border-radius: 4px;
+        padding: 2px;
     }
 
     .skills-group {
@@ -1304,3 +1333,4 @@ footer {
         border-radius: 4px;
         padding: 2px;
     }
+}

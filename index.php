@@ -192,7 +192,7 @@
                 <p>Alexandre SEQUEIRA</p>
                 <p id="number">0628657515</p>
                 <p id="mail">alexandre.sequeira01@gmail.com</p>
-                <p id="address">63 rue Maryse Bastié <br>01000 Saint-Denis-lès-Bourg</p>
+                <p id="address">18 rue de l'oiselière <br>69009 Lyon</p>
             </div>
             <form action="treatment.php" method="post">
                 <label for="name">* Nom :</label><br>
