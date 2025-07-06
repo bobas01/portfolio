@@ -1,56 +1,41 @@
 let rightArrow = document.getElementById('rightArrow');
 let leftArrow = document.getElementById('leftArrow');
-let windowSlider = document.getElementById('window-slider').offsetWidth;
-let listSlide = document.getElementById('list-slide')
-let slide = document.getElementsByClassName('slide');
-let nbSlide = slide.length;
-let mLeft = 0;
-
-
-rightArrow.addEventListener('click', function () {
-   if (mLeft - windowSlider == windowSlider * -8) {
-
-      this.click.stopPropagation()
-   }
-   else {
-      mLeft -= windowSlider;
-      listSlide.style.marginLeft = mLeft + 'px';
-   }
-});
-
-
-
-leftArrow.addEventListener('click', function () {
-   if (mLeft + windowSlider == windowSlider) {
-
-      this.click.stopPropagation()
-   }
-   else {
-      mLeft += windowSlider;
-      listSlide.style.marginLeft = mLeft + 'px';
-   }
-
-});
+let slides = document.querySelectorAll('#list-slide .slide');
+let nbSlide = slides.length;
 let currentSlide = 0;
+let intervalId;
 
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+    });
+}
 
 function nextSlide() {
-   slide[currentSlide].style.display = "none";
-   currentSlide = (currentSlide + 1) % nbSlide;
-   slide[currentSlide].style.display = "block";
+    currentSlide = (currentSlide + 1) % nbSlide;
+    showSlide(currentSlide);
 }
 
 function prevSlide() {
-   slide[currentSlide].style.display = "none";
-   currentSlide = (currentSlide - 1 + nbSlide) % nbSlide;
-   slide[currentSlide].style.display = "block";
+    currentSlide = (currentSlide - 1 + nbSlide) % nbSlide;
+    showSlide(currentSlide);
 }
 
+rightArrow.addEventListener('click', nextSlide);
+leftArrow.addEventListener('click', prevSlide);
 
-listSlide.addEventListener("touchstart", handleTouchStart, false);
-listSlide.addEventListener("touchmove", handleTouchMove, false);
+// Affiche la première slide au chargement
+showSlide(currentSlide);
 
+// Carousel automatique (toutes les 3 secondes)
+intervalId = setInterval(nextSlide, 3000);
 
+// Pause le carousel au survol
+const slider = document.getElementById('slider');
+slider.addEventListener('mouseenter', () => clearInterval(intervalId));
+slider.addEventListener('mouseleave', () => intervalId = setInterval(nextSlide, 3000));
+
+// Swipe mobile
 let xDown = null;
 let yDown = null;
 
@@ -70,17 +55,30 @@ function handleTouchMove(evt) {
    let xDiff = xDown - xUp;
    let yDiff = yDown - yUp;
 
-
    if (Math.abs(xDiff) > Math.abs(yDiff)) {
       if (xDiff > 0) {
-
          nextSlide();
       } else {
-
          prevSlide();
       }
    }
 
    xDown = null;
    yDown = null;
+}
+
+const listSlide = document.getElementById('list-slide');
+listSlide.addEventListener('touchstart', handleTouchStart, false);
+listSlide.addEventListener('touchmove', handleTouchMove, false);
+
+function countCharacters(textarea) {
+    var characterCount = textarea.value.length;
+    var counterElement = document.getElementById('characterCount');
+    counterElement.textContent = characterCount + '/500';
+
+    if (characterCount < 20) {
+        counterElement.style.color = 'red';
+    } else {
+        counterElement.style.color = 'green';
+    }
 }
