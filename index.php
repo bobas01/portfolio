@@ -86,6 +86,10 @@
                                 <img src="./asset/img/skills/VueJS.svg" alt="VueJS">
                                 <span>VueJS</span>
                             </div>
+                            <div class="image">
+                                <img src="./asset/img/skills/SvelteJS.svg" alt="svelte">
+                                <span>Svelte</span>
+                            </div>
                         </div>
                     </li>
                     <!-- Outils & Méthodes -->
@@ -195,23 +199,35 @@
                 <p id="address">18 rue de l'oiselière <br>69009 Lyon</p>
             </div>
             <form action="treatment.php" method="post">
-                <label for="name">* Nom :</label><br>
-                <input type="text" id="name" name="name" required><br>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">* Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">* Prénom :</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                </div>
 
-                <label for="surname">* Prénom :</label><br>
-                <input type="text" id="surname" name="surname" required><br>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">* Numéro de téléphone :</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">* E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
 
-                <label for="phone">* Numéro de téléphone :</label><br>
-                <input type="tel" id="phone" name="phone" required><br>
+                <div class="form-group">
+                    <label for="message">* Message :</label>
+                    <textarea id="message" name="message" rows="5" cols="40" oninput="countCharacters(this)" placeholder="Minimum 20 caractères" minlenght="20" maxlenght="500" required></textarea>
+                    <span id="characterCount"></span>
+                </div>
 
-                <label for="email">* E-mail :</label><br>
-                <input type="email" id="email" name="email" required><br>
-
-                <label for="message">* Message :</label><br>
-                <textarea id="message" name="message" rows="5" cols="40" oninput="countCharacters(this)" placeholder="Minimum 20 caractères" minlenght="20" maxlenght="500" required></textarea>
-                <span id="characterCount"></span><br>
                 <input type="hidden" id="recaptchaResponse" name="recaptchaResponse">
-
                 <input id="submit" type="submit" value="Envoyer">
             </form>
             <script src="https://www.google.com/recaptcha/api.js?render=6Ld8sFEpAAAAANuo57ebv2dlqYlDT5NF-I_6cCVO"></script>

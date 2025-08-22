@@ -212,4 +212,5 @@
     </div>
 </footer>
 
+<script src="./node_modules/simple-parallax-js/dist/vanilla/simpleParallaxVanilla.umd.js"></script>
 <script src="./animation.js"></script>
