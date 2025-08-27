@@ -296,6 +296,20 @@ header .row-limit-size .header-container .language-flags .flag-link.en-flag {
     height: 50px;
   }
 }
+/*header mobile - drapeaux en dessous du logo et titre*/
+@media screen and (max-width: 1049px) {
+  header .row-limit-size .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  header .row-limit-size .header-container .logo-title-container {
+    position: static;
+    transform: none;
+  }
+  header .row-limit-size .header-container .language-flags {
+    justify-content: center;
+  }
+}
 /*section présentation*/
 #presentation {
   padding: 60px 0;
