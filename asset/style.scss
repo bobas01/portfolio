@@ -251,35 +251,85 @@ header {
 
     .row-limit-size .header-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 15px;
+        position: relative;
 
-        .logo-link {
-            display: block;
-            text-decoration: none;
+        .logo-title-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-wrap: nowrap;
 
-            #logo img {
-                width: 50px;
-                transition: transform 0.3s ease;
+            .logo-link {
+                display: block;
+                text-decoration: none;
 
-                &:hover {
-                    transform: scale(1.1);
+                #logo img {
+                    width: 50px;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .pseudo-link {
+                display: block;
+                text-decoration: none;
+
+                #pseudo img {
+                    width: 250px;
+                    height: 50px;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
 
-        .pseudo-link {
-            display: block;
-            text-decoration: none;
+        .language-flags {
+            display: flex;
+            gap: 15px;
+            align-items: center;
 
-            #pseudo img {
-                width: 250px;
-                height: 50px;
-                transition: transform 0.3s ease;
+            .flag-link {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid $green;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+                position: relative;
+                overflow: hidden;
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.1);
+                    border-color: #785123;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                }
+
+                &.active {
+                    border-color: #785123;
+                    box-shadow: 0 0 0 3px rgba(120, 81, 35, 0.3);
+                }
+
+                &.fr-flag {
+                    background-image: url('https://flagcdn.com/fr.svg');
+                    background-size: 120%;
+                    background-position: center;
+                }
+
+                &.en-flag {
+                    background-image: url('https://flagcdn.com/gb.svg');
+                    background-size: 120%;
+                    background-position: center;
                 }
             }
         }
@@ -291,15 +341,26 @@ header {
 @media screen and (min-width:800px) {
     header {
         .row-limit-size .header-container {
-            gap: 25px;
+            .logo-title-container {
+                gap: 25px;
 
-            .logo-link #logo img {
-                width: 100px;
+                .logo-link #logo img {
+                    width: 100px;
+                }
+
+                .pseudo-link #pseudo img {
+                    width: 500px;
+                    height: 80px;
+                }
             }
 
-            .pseudo-link #pseudo img {
-                width: 500px;
-                height: 80px;
+            .language-flags {
+                gap: 20px;
+
+                .flag-link {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
     }

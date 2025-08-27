@@ -1,58 +1,51 @@
 <?php include_once './header.php' ?>
 <main>
-    <section id="presentation" ">
-  <div class=" row-limit-size has-animation animation-ltr" data-delay="1000">
-        <div>
-            <figure>
-                <img id="panda" src="./asset/img/icon/panda_with_computer.png" alt="panda_with_computer">
-            </figure>
-            <div style="z-index:9;">
-                <article>
-                    <h1>Alexandre SEQUEIRA</h1>
-                    <h3>Développeur fullstack</h3>
-                </article>
-                <div id="links">
-                    <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
-                    <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg" alt="github"></a>
-                    <div id="CV">
-                        <button class="click-btn CV">
-                            <a target="_blank" href="./asset/CVdev.pdf"> Mon CV</a>
-                        </button>
-
+    <section id="presentation">
+        <div class="row-limit-size has-animation animation-ltr" data-delay="1000">
+            <div>
+                <figure>
+                    <img id="panda" src="./asset/img/icon/panda_with_computer.png" alt="panda_with_computer">
+                </figure>
+                <div style="z-index:9;">
+                    <article>
+                        <h1><?php echo t('hero.name'); ?></h1>
+                        <h3><?php echo t('hero.role'); ?></h3>
+                    </article>
+                    <div id="links">
+                        <a class="icon" target="_blank" href="https://www.linkedin.com/in/alexandre-sequeira-258a29137/"><img src="./asset/img/icon/icons8-linkedin-2.svg" alt="linkedin"></a>
+                        <a class="icon" target="_blank" href="https://github.com/bobas01"><img src="./asset/img/icon/icons8-github.svg" alt="github"></a>
+                        <div id="CV">
+                            <button class="click-btn CV">
+                                <a target="_blank" href="./asset/<?php echo current_lang() === 'en' ? 'CVEnglish.pdf' : 'CVdev.pdf'; ?>"> <?php echo t('hero.cv'); ?></a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="txtPresentation" class="has-animation animation-ltr" data-delay="1500">
-            <div class="bamboo-border">
-                <p class=""> Passionné par le <strong>développement web et mobile</strong>, j'ai débuté mon parcours en autodidacte sur <strong>OpenClassrooms</strong>, avant de collaborer avec un <strong>développeur senior</strong> lors de mes premiers projets freelance axés front-end.<br><br>
-                    Après deux années d'apprentissage en parallèle de mon activité professionnelle, j'ai validé un <strong>Bac+2 en développement web et web mobile</strong> chez <strong>Online FormaPro</strong> (décembre 2023), puis effectué un stage enrichissant chez <strong>Hubwiser</strong>.<br><br>
-                    J'ai ensuite rejoint <strong>Sportyneo</strong> en alternance en tant que <strong>développeur full stack</strong>, où j'ai pu approfondir mes <strong>compétences techniques</strong>, collaborer sur des projets variés et développer une vision globale de la <strong>gestion de projet digital</strong>.<br><br>
-                    En juillet 2025, j'ai obtenu un <strong>Bachelor 3 Chef de Projet Digitaux</strong>, avec une spécialisation en <strong>conception</strong>, <strong>développement d'applications</strong> et <strong>cybersécurité</strong>.<br><br>
-                    Aujourd'hui, je mets mes compétences au service de <strong>projets innovants</strong>, en tant que <strong>développeur full stack</strong> ou <strong>chef de projet digital</strong>, prêt à relever de nouveaux défis et à accompagner entreprises et entrepreneurs dans leur <strong>transformation digitale</strong>.
-
-                </p>
+            <div id="txtPresentation" class="has-animation animation-ltr" data-delay="1500">
+                <div class="bamboo-border">
+                    <p><?php echo t('presentation.text'); ?></p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="responsive">
-
         <div class="row-limit-size">
             <article>
-                <h2>Développement web responsive</h2>
+                <h2><?php echo t('section.responsive.title'); ?></h2>
                 <img src="./asset/img/projet/smartmockups_lg26j38g.jpg" alt="mokup portfolio">
             </article>
         </div>
     </section>
+
     <section id="competences">
         <div class="row-limit-size">
             <article>
-                <h2 class="image">Mes compétences</h2>
+                <h2 class="image"><?php echo t('section.skills.title'); ?></h2>
                 <ul>
-                    <!-- Développement -->
                     <li>
-                        <h3>Développement</h3>
+                        <h3><?php echo t('skills.dev'); ?></h3>
                         <div class="skills-group">
                             <div class="image">
                                 <img src="./asset/img/skills/HTML.svg" alt="HTML">
@@ -92,9 +85,8 @@
                             </div>
                         </div>
                     </li>
-                    <!-- Outils & Méthodes -->
                     <li>
-                        <h3>Outils & Méthodes</h3>
+                        <h3><?php echo t('skills.tools'); ?></h3>
                         <div class="skills-group">
                             <div class="image">
                                 <img src="./asset/img/skills/Git.svg" alt="Git">
@@ -122,9 +114,8 @@
                             </div>
                         </div>
                     </li>
-                    <!-- Cloud & Services -->
                     <li>
-                        <h3>Cloud & Services</h3>
+                        <h3><?php echo t('skills.cloud'); ?></h3>
                         <div class="skills-group">
                             <div class="image">
                                 <img src="./asset/img/skills/AWS.svg" alt="AWS">
@@ -152,9 +143,10 @@
             </article>
         </div>
     </section>
+
     <section id="projet">
         <div class="row-limit-size">
-            <h2>Mes projets</h2>
+            <h2><?php echo t('section.projects.title'); ?></h2>
 
             <div id="slider">
                 <div id="leftArrow">
@@ -162,19 +154,18 @@
                 </div>
                 <div id="window-slider">
                     <div id="list-slide">
-                        <div class="slide"><a href="./projet.php#hemadex"><img src="./asset/img/projet/hemadex.webp" alt="Hemadex"></a></div>
-                        <div class="slide"><a href="./projet.php#flavourfusion"><img src="./asset/img/projet/projetFlavourFusion.png" alt="FlavourFusion"></a></div>
-                        <div class="slide"><a href="./projet.php#homeaway"><img src="./asset/img/projet/projetHomeAway.png" alt="HomeAway"></a></div>
-                        <div class="slide"><a href="./projet.php#kitsutheque"><img src="./asset/img/projet/projetKitsutheque.jpg" alt="Kitsuthèque"></a></div>
-                        <div class="slide"><a href="./projet.php#jadoo"><img src="./asset/img/projet/projetJadoo.jpg" alt="Jadoo"></a></div>
-                        <div class="slide"><a href="./projet.php#caeli"><img src="./asset/img/projet/CaeliV2.jpg" alt="Caeli"></a></div>
-                        <div class="slide"><a href="./projet.php#gite"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></a></div>
-                        <div class="slide"><a href="./projet.php#glossaire"><img src="./asset/img/projet/projetflag.jpg" alt="Glossaire des drapeaux"></a></div>
-                        <div class="slide"><a href="./projet.php#restaurant"><img src="./asset/img/projet/ProjetResto.jpg" alt="Restaurant"></a></div>
-                        <div class="slide"><a href="./projet.php#closmarsault"><img src="./asset/img/projet/projetclosdeMarsault.jpg" alt="Le clos de marsault"></a></div>
-                        <div class="slide"><a href="./projet.php#vuelamp"><img src="./asset/img/projet/projetVueLamp.jpg" alt="VueLamp"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#hemadex'); ?>"><img src="./asset/img/projet/hemadex.webp" alt="Hemadex"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#flavourfusion'); ?>"><img src="./asset/img/projet/projetFlavourFusion.png" alt="FlavourFusion"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#homeaway'); ?>"><img src="./asset/img/projet/projetHomeAway.png" alt="HomeAway"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#kitsutheque'); ?>"><img src="./asset/img/projet/projetKitsutheque.jpg" alt="Kitsuthèque"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#jadoo'); ?>"><img src="./asset/img/projet/projetJadoo.jpg" alt="Jadoo"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#caeli'); ?>"><img src="./asset/img/projet/CaeliV2.jpg" alt="Caeli"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#gite'); ?>"><img src="./asset/img/projet/projetGite.jpg" alt="Le gite du panda"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#glossaire'); ?>"><img src="./asset/img/projet/projetflag.jpg" alt="Glossaire des drapeaux"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#restaurant'); ?>"><img src="./asset/img/projet/ProjetResto.jpg" alt="Restaurant"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#closmarsault'); ?>"><img src="./asset/img/projet/projetclosdeMarsault.jpg" alt="Le clos de marsault"></a></div>
+                        <div class="slide"><a href="<?php echo with_lang_url('./projet.php#vuelamp'); ?>"><img src="./asset/img/projet/projetVueLamp.jpg" alt="VueLamp"></a></div>
                     </div>
-
                 </div>
                 <div id="rightArrow">
                     <img src="./asset/img/icon/rightArrow.svg" alt="arrow">
@@ -182,53 +173,51 @@
             </div>
             <figure id="swipe"><img src="./asset/img/icon/doubleArrow.svg" alt="swipe" style="width: 50px; height: 50px;"></figure>
         </div>
-        <button class="click-btn" id="buttonProjet"><a href="./projet.php">En savoir plus</a></button>
+        <button class="click-btn" id="buttonProjet"><a href="<?php echo with_lang_url('./projet.php'); ?>"><?php echo t('button.more'); ?></a></button>
     </section>
 </main>
 
-
-
 <footer>
     <div class="row-limit-size">
-        <h2>Contact</h2>
+        <h2><?php echo t('contact.title'); ?></h2>
         <div id="contact">
             <div id="myInfo">
-                <p>Alexandre SEQUEIRA</p>
-                <p id="number">0628657515</p>
-                <p id="mail">alexandre.sequeira01@gmail.com</p>
-                <p id="address">18 rue de l'oiselière <br>69009 Lyon</p>
+                <p><?php echo t('contact.info.name'); ?></p>
+                <p id="number"><?php echo t('contact.info.phone'); ?></p>
+                <p id="mail"><?php echo t('contact.info.email'); ?></p>
+                <p id="address"><?php echo t('contact.info.address'); ?></p>
             </div>
             <form action="treatment.php" method="post">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">* Nom :</label>
+                        <label for="name"><?php echo t('form.required'); ?> <?php echo t('form.name'); ?> :</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="surname">* Prénom :</label>
+                        <label for="surname"><?php echo t('form.required'); ?> <?php echo t('form.surname'); ?> :</label>
                         <input type="text" id="surname" name="surname" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">* Numéro de téléphone :</label>
+                        <label for="phone"><?php echo t('form.required'); ?> <?php echo t('form.phone'); ?> :</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">* E-mail :</label>
+                        <label for="email"><?php echo t('form.required'); ?> <?php echo t('form.email'); ?> :</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">* Message :</label>
-                    <textarea id="message" name="message" rows="5" cols="40" oninput="countCharacters(this)" placeholder="Minimum 20 caractères" minlenght="20" maxlenght="500" required></textarea>
+                    <label for="message"><?php echo t('form.required'); ?> <?php echo t('form.message'); ?> :</label>
+                    <textarea id="message" name="message" rows="5" cols="40" oninput="countCharacters(this)" placeholder="<?php echo t('form.message.placeholder'); ?>" minlenght="<?php echo t('form.message.minlength'); ?>" maxlenght="<?php echo t('form.message.maxlength'); ?>" required></textarea>
                     <span id="characterCount"></span>
                 </div>
 
                 <input type="hidden" id="recaptchaResponse" name="recaptchaResponse">
-                <input id="submit" type="submit" value="Envoyer">
+                <input id="submit" type="submit" value="<?php echo t('form.send'); ?>">
             </form>
             <script src="https://www.google.com/recaptcha/api.js?render=6Ld8sFEpAAAAANuo57ebv2dlqYlDT5NF-I_6cCVO"></script>
             <script>
@@ -264,10 +253,9 @@
     }
     ?>
     <div id="copyright">
-        <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="copyright">Bobas.Dev 2023</span>
+        <span><img src="./asset/img/icon/icons8-copyright-24.png" alt="copyright"><?php echo t('footer.copyright'); ?></span>
     </div>
 </footer>
-
 
 <script src="./main.js"></script>
 <script src="./animation.js"></script>

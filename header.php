@@ -1,5 +1,6 @@
+<?php include_once __DIR__ . '/i18n.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo current_lang() ?? 'fr'; ?>">
 
 <head>
     <meta charset="UTF-8">
@@ -35,19 +36,36 @@
 </head>
 
 <body>
+    <!-- Debug: afficher la langue actuelle -->
+    <?php if (isset($_GET['debug'])): ?>
+        <div style="background: yellow; padding: 10px; margin: 10px;">
+            <strong>Debug:</strong><br>
+            Langue actuelle: <?php echo current_lang(); ?><br>
+            Session lang: <?php echo $_SESSION['lang'] ?? 'non définie'; ?><br>
+            GET lang: <?php echo $_GET['lang'] ?? 'non défini'; ?><br>
+            Session ID: <?php echo session_id(); ?>
+        </div>
+    <?php endif; ?>
+
     <header class="has-animation">
         <div class="row-limit-size has-animation animation-ltr" data-delay="10">
             <div class="header-container">
-                <a href="./index.php" class="logo-link">
-                    <figure id="logo" class="apparition-container">
-                        <img src="./asset/img/divers/logoCircle.svg" alt="logo">
-                    </figure>
-                </a>
-                <a href="./index.php" class="pseudo-link">
-                    <figure id="pseudo" class="apparition-container">
-                        <img src="./asset/img/divers/BOBAS.svg" alt="bobas.dev">
-                    </figure>
-                </a>
+                <nav class="language-flags">
+                    <a href="<?php echo with_lang_url('./index.php', 'fr'); ?>" class="flag-link fr-flag <?php echo current_lang() === 'fr' ? 'active' : ''; ?>" aria-label="Français"></a>
+                    <a href="<?php echo with_lang_url('./index.php', 'en'); ?>" class="flag-link en-flag <?php echo current_lang() === 'en' ? 'active' : ''; ?>" aria-label="English"></a>
+                </nav>
+                <div class="logo-title-container">
+                    <a href="<?php echo with_lang_url('./index.php'); ?>" class="logo-link">
+                        <figure id="logo" class="apparition-container">
+                            <img src="./asset/img/divers/logoCircle.svg" alt="logo">
+                        </figure>
+                    </a>
+                    <a href="<?php echo with_lang_url('./index.php'); ?>" class="pseudo-link">
+                        <figure id="pseudo" class="apparition-container">
+                            <img src="./asset/img/divers/BOBAS.svg" alt="bobas.dev">
+                        </figure>
+                    </a>
+                </div>
             </div>
         </div>
     </header>

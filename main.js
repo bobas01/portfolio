@@ -74,7 +74,15 @@ listSlide.addEventListener('touchmove', handleTouchMove, false);
 function countCharacters(textarea) {
     var characterCount = textarea.value.length;
     var counterElement = document.getElementById('characterCount');
-    counterElement.textContent = characterCount + '/500';
+    
+    // Déterminer la langue actuelle depuis l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentLang = urlParams.get('lang') || 'fr';
+    
+    // Texte selon la langue
+    const characterText = currentLang === 'en' ? 'characters' : 'caractères';
+    
+    counterElement.textContent = characterCount + '/500 ' + characterText;
 
     if (characterCount < 20) {
         counterElement.style.color = 'red';
